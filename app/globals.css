@@ -4,17 +4,37 @@
 /*  Maverick Trading — brand theme                                     */
 /* ------------------------------------------------------------------ */
 @theme {
-  --color-coffee: #0a0706;
-  --color-coffee-800: #1a1411;
-  --color-coffee-700: #241b16;
+  /* === Maverick Brand System (exact palette) === */
+  /* darks */
+  --color-coffee: #1c1008; /* espresso — darkest */
+  --color-coffee-800: #2a1a10;
+  --color-coffee-700: #3d2b1f; /* dark wood */
+  /* teal family */
+  --color-teal: #1a5c58; /* deep teal (jar) */
+  --color-teal-deep: #113d3a;
+  --color-teal-bright: #2a7a6b; /* verdigris / patina */
+  /* copper family — oxidized primary + rose metallic */
+  --color-copper: #7b4a2d; /* oxidized copper (primary) */
+  --color-copper-deep: #5c3320;
+  --color-copper-bright: #b87455; /* rose copper (metallic) */
+  --color-spice: #8b2d00;
+  /* metals */
   --color-silver: #c0c0c0;
   --color-silver-bright: #f2f2f2;
-  --color-copper: #b87333;
-  --color-copper-bright: #d68f4e;
-  --color-gold: #e3a331;
-  --color-sienna: #4a3022;
-  --color-crema: #e6d8ce;
-  --color-crema-dim: #b3a89f;
+  /* gold token kept for legacy refs → mapped to rose/sand warmth */
+  --color-gold: #b87455;
+  --color-gold-bright: #d49a72;
+  --color-sienna: #5c3320;
+  /* warm neutrals — the dominant brand backgrounds */
+  --color-cream: #f5efe6; /* off-white base */
+  --color-cream-200: #e5d9cc;
+  --color-sand: #d4b896; /* kraft sand */
+  --color-sand-700: #b89a78;
+  /* text */
+  --color-crema: #f5efe6; /* light text on dark */
+  --color-crema-dim: #cabaa6;
+  --color-ink: #1c1008; /* dark text on light */
+  --color-ink-dim: #5c3320;
 
   --font-display: var(--font-oswald);
   --font-sans: var(--font-inter);
@@ -68,12 +88,12 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
-  background-color: var(--color-coffee);
+  background-color: var(--color-cream);
 }
 
 body {
-  background-color: var(--color-coffee);
-  color: var(--color-crema);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
   font-family: var(--font-sans), Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -81,8 +101,8 @@ body {
 }
 
 ::selection {
-  background: var(--color-gold);
-  color: var(--color-coffee);
+  background: var(--color-copper);
+  color: var(--color-cream);
 }
 
 /* Brushed-metal / chrome text fill, reused by the wordmark */
@@ -108,6 +128,38 @@ body {
   animation: var(--animate-shimmer);
 }
 
+/* Hammered-copper engraved plate — the brand's signature surface */
+.copper-plate {
+  position: relative;
+  background-image: linear-gradient(
+      135deg,
+      rgba(255, 220, 180, 0.25),
+      rgba(40, 18, 6, 0.55)
+    ),
+    url("/copper-texture.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 1px 1px rgba(255, 230, 200, 0.45),
+    inset 0 -2px 6px rgba(40, 18, 6, 0.6), 0 18px 40px -20px rgba(0, 0, 0, 0.8);
+}
+
+/* Engraved double rule, like the foil edge on the packaging */
+.ornate-frame {
+  box-shadow: inset 0 0 0 1px rgba(212, 154, 51, 0.55),
+    inset 0 0 0 5px rgba(20, 83, 77, 0.0), inset 0 0 0 6px rgba(212, 154, 51, 0.3);
+}
+
+/* Fine top hairline used to separate alternating bands */
+.edge-gold {
+  border-image: linear-gradient(
+      90deg,
+      transparent,
+      rgba(212, 154, 51, 0.6),
+      transparent
+    )
+    1;
+}
+
 /* Reveal-on-scroll primitive */
 .reveal {
   opacity: 0;
@@ -120,40 +172,84 @@ body {
   transform: translateY(0);
 }
 
-/* Subtle Ottoman damask backdrop for the spice section */
+/* Ottoman ornament backdrop — cream with gold filigree, matching packaging */
 .damask {
-  background-color: var(--color-crema);
+  background-color: var(--color-cream);
   background-image: radial-gradient(
       circle at 50% 0,
-      rgba(74, 48, 34, 0.16) 0 2px,
+      rgba(212, 154, 51, 0.22) 0 2px,
       transparent 3px
     ),
     radial-gradient(
       circle at 0 50%,
-      rgba(74, 48, 34, 0.12) 0 2px,
+      rgba(74, 48, 34, 0.14) 0 2px,
       transparent 3px
     ),
     radial-gradient(
       circle at 100% 50%,
-      rgba(74, 48, 34, 0.12) 0 2px,
+      rgba(74, 48, 34, 0.14) 0 2px,
       transparent 3px
     ),
     radial-gradient(
       circle at 50% 100%,
-      rgba(74, 48, 34, 0.16) 0 2px,
+      rgba(212, 154, 51, 0.22) 0 2px,
       transparent 3px
     ),
     radial-gradient(
       circle at 25% 25%,
-      rgba(184, 115, 51, 0.1) 0 6px,
+      rgba(20, 83, 77, 0.12) 0 6px,
       transparent 7px
     ),
     radial-gradient(
       circle at 75% 75%,
-      rgba(184, 115, 51, 0.1) 0 6px,
+      rgba(20, 83, 77, 0.12) 0 6px,
       transparent 7px
     );
-  background-size: 48px 48px;
+  background-size: 46px 46px;
+}
+
+/* Kraft / natural paper — warm sand with fine horizontal grain */
+.kraft {
+  background-color: var(--color-sand);
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(92, 51, 32, 0.05) 0 1px,
+    transparent 1px 7px
+  );
+}
+
+/* Ottoman geometric tile lattice (copper line-work on dark) */
+.tile-pattern {
+  background-image: linear-gradient(
+      45deg,
+      rgba(184, 116, 85, 0.12) 25%,
+      transparent 25% 75%,
+      rgba(184, 116, 85, 0.12) 75%
+    ),
+    linear-gradient(
+      45deg,
+      rgba(184, 116, 85, 0.12) 25%,
+      transparent 25% 75%,
+      rgba(184, 116, 85, 0.12) 75%
+    );
+  background-size: 34px 34px;
+  background-position: 0 0, 17px 17px;
+}
+
+/* Teal section with a faint ornament weave */
+.teal-ornament {
+  background-color: var(--color-teal-deep);
+  background-image: radial-gradient(
+      circle at 25% 25%,
+      rgba(212, 154, 51, 0.1) 0 5px,
+      transparent 6px
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(212, 154, 51, 0.08) 0 5px,
+      transparent 6px
+    );
+  background-size: 40px 40px;
 }
 
 /* ------------------------------------------------------------------ */

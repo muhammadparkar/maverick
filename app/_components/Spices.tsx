@@ -43,7 +43,7 @@ export default function Spices() {
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {spices.map((s, i) => (
             <Reveal key={s.name} delay={i * 80}>
-              <article className="group relative flex h-full cursor-default flex-col overflow-hidden rounded-2xl border border-sienna/15 bg-crema/70 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_45px_-22px_rgba(74,48,34,0.6)]">
+              <article className="ornate-frame group relative flex h-full cursor-default flex-col overflow-hidden rounded-2xl border border-gold/30 bg-white/70 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_45px_-22px_rgba(74,48,34,0.6)]">
                 {/* jar lid */}
                 <div className="h-3 w-full bg-gradient-to-r from-copper to-copper-bright" />
                 <div className="relative aspect-[4/3] overflow-hidden">

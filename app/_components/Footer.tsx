@@ -4,7 +4,7 @@ import { company, navLinks } from "../_data/site";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-coffee-800">
+    <footer className="border-t border-gold/20 bg-teal-deep">
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           {/* brand */}

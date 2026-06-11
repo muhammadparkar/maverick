@@ -3,7 +3,7 @@ import { partners } from "../_data/site";
 export default function Partners() {
   const row = [...partners, ...partners];
   return (
-    <section className="border-y border-white/10 bg-coffee py-8">
+    <section className="teal-ornament border-y border-gold/20 py-8">
       <p className="mb-6 text-center text-xs uppercase tracking-[0.3em] text-crema-dim">
         Trusted by cafés &amp; roasters nationwide
       </p>
@@ -12,7 +12,7 @@ export default function Partners() {
           {row.map((p, i) => (
             <span
               key={i}
-              className="whitespace-nowrap font-display text-lg font-bold uppercase tracking-wide text-crema-dim/70"
+              className="whitespace-nowrap font-display text-lg font-bold uppercase tracking-wide text-cream/60"
             >
               {p}
             </span>

@@ -79,8 +79,8 @@ export default function Machines() {
               <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(105deg,transparent_40%,rgba(255,255,255,0.05)_50%,transparent_60%)]" />
 
               {/* copper engraved plate */}
-              <div className="relative mb-6 inline-flex flex-col rounded-lg bg-gradient-to-br from-copper-bright to-copper px-5 py-3 shadow-[inset_0_1px_2px_rgba(255,255,255,0.4),0_8px_20px_-8px_rgba(0,0,0,0.7)]">
-                <span className="font-display text-base font-bold uppercase tracking-[0.25em] text-coffee">
+              <div className="copper-plate relative mb-6 inline-flex flex-col rounded-lg px-5 py-3 ornate-frame">
+                <span className="font-display text-base font-bold uppercase tracking-[0.25em] text-coffee drop-shadow-[0_1px_0_rgba(255,230,200,0.5)]">
                   {m.plate}
                 </span>
               </div>

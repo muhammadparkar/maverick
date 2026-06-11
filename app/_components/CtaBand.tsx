@@ -8,8 +8,8 @@ export default function CtaBand() {
       className="relative bg-coffee bg-cover bg-fixed bg-center py-28 sm:py-36"
       style={{ backgroundImage: `url(${partnerCta.bg})` }}
     >
-      <div className="absolute inset-0 bg-coffee/80" />
-      <div className="absolute inset-0 bg-gradient-to-r from-coffee via-coffee/40 to-transparent" />
+      <div className="absolute inset-0 bg-teal-deep/85" />
+      <div className="absolute inset-0 bg-gradient-to-r from-teal-deep via-teal-deep/50 to-transparent" />
 
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal className="max-w-xl">

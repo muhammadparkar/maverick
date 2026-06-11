@@ -3,7 +3,7 @@ import { steps } from "../_data/site";
 
 export default function Process() {
   return (
-    <section id="process" className="scroll-mt-24 bg-coffee py-20 sm:py-28">
+    <section id="process" className="teal-ornament scroll-mt-24 border-y border-gold/20 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal className="max-w-2xl">
           <p className="font-display text-xs uppercase tracking-[0.3em] text-copper-bright">
@@ -21,7 +21,7 @@ export default function Process() {
           <ol className="grid gap-8 lg:grid-cols-4">
             {steps.map((s, i) => (
               <Reveal key={s.n} as="li" delay={i * 110} className="relative">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-copper/50 bg-coffee font-display text-lg font-bold text-gold">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/50 bg-teal font-display text-lg font-bold text-gold-bright">
                   {s.n}
                 </div>
                 <h3 className="mt-5 font-display text-xl font-bold uppercase tracking-wide text-crema">

@@ -15,20 +15,20 @@ const ICONS: Record<string, React.ReactNode> = {
 };
 
 const ACCENT: Record<string, string> = {
-  silver: "group-hover:border-silver/60 group-hover:shadow-[0_18px_40px_-18px_rgba(192,192,192,0.4)] text-silver-bright",
-  copper: "group-hover:border-copper/60 group-hover:shadow-copper-glow text-copper-bright",
-  gold: "group-hover:border-gold/60 group-hover:shadow-gold-glow text-gold",
+  silver: "group-hover:border-ink/30 text-ink",
+  copper: "group-hover:border-copper/60 group-hover:shadow-copper-glow text-copper",
+  gold: "group-hover:border-teal-bright/60 text-teal-bright",
 };
 
 export default function Pillars() {
   return (
-    <section className="relative border-y border-white/10 bg-coffee-800 py-20 sm:py-28">
+    <section className="relative border-y border-ink/10 bg-cream py-20 text-ink sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal className="max-w-2xl">
-          <p className="font-display text-xs uppercase tracking-[0.3em] text-copper-bright">
+          <p className="font-display text-xs uppercase tracking-[0.3em] text-copper">
             Three lines, one standard
           </p>
-          <h2 className="mt-3 font-display text-4xl font-bold uppercase tracking-wide text-crema sm:text-5xl">
+          <h2 className="mt-3 font-display text-4xl font-bold uppercase tracking-wide text-ink sm:text-5xl">
             Everything the bar needs
           </h2>
         </Reveal>
@@ -38,17 +38,17 @@ export default function Pillars() {
             <Reveal key={p.id} delay={i * 90}>
               <Link
                 href={p.href}
-                className={`group flex h-full cursor-pointer flex-col rounded-2xl border border-white/10 bg-coffee p-7 transition-all duration-300 hover:-translate-y-1 ${ACCENT[p.accent]}`}
+                className={`group flex h-full cursor-pointer flex-col rounded-2xl border border-ink/10 bg-white/60 p-7 shadow-[0_18px_40px_-30px_rgba(28,16,8,0.5)] transition-all duration-300 hover:-translate-y-1 ${ACCENT[p.accent]}`}
               >
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5">
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-ink/10 bg-cream">
                   <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={1.7} strokeLinecap="round" strokeLinejoin="round">
                     {ICONS[p.id]}
                   </svg>
                 </span>
-                <h3 className="mt-5 font-display text-2xl font-bold uppercase tracking-wide text-crema">
+                <h3 className="mt-5 font-display text-2xl font-bold uppercase tracking-wide text-ink">
                   {p.title}
                 </h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-crema-dim">
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-dim">
                   {p.copy}
                 </p>
                 <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium uppercase tracking-wide">

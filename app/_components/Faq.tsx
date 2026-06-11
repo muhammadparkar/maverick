@@ -8,18 +8,18 @@ export default function Faq() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="bg-coffee py-20 sm:py-28">
+    <section className="kraft py-20 text-ink sm:py-28">
       <div className="mx-auto max-w-3xl px-5 sm:px-8">
         <Reveal className="mb-10 text-center">
-          <p className="font-display text-xs uppercase tracking-[0.3em] text-copper-bright">
+          <p className="font-display text-xs uppercase tracking-[0.3em] text-teal">
             Trade questions
           </p>
-          <h2 className="mt-3 font-display text-4xl font-bold uppercase tracking-wide text-crema sm:text-5xl">
+          <h2 className="mt-3 font-display text-4xl font-bold uppercase tracking-wide text-ink sm:text-5xl">
             Good to know
           </h2>
         </Reveal>
 
-        <Reveal className="divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/10 bg-coffee-800">
+        <Reveal className="divide-y divide-ink/10 overflow-hidden rounded-2xl border border-ink/10 bg-white/60">
           {faqs.map((f, i) => {
             const isOpen = open === i;
             return (
@@ -28,14 +28,14 @@ export default function Faq() {
                   type="button"
                   onClick={() => setOpen(isOpen ? null : i)}
                   aria-expanded={isOpen}
-                  className="flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-white/[0.03]"
+                  className="flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-ink/[0.03]"
                 >
-                  <span className="font-display text-lg font-medium uppercase tracking-wide text-crema">
+                  <span className="font-display text-lg font-medium uppercase tracking-wide text-ink">
                     {f.q}
                   </span>
                   <svg
                     viewBox="0 0 24 24"
-                    className={`h-5 w-5 shrink-0 text-gold transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
+                    className={`h-5 w-5 shrink-0 text-copper transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
                     fill="none"
                     stroke="currentColor"
                     strokeWidth={2}
@@ -49,7 +49,7 @@ export default function Faq() {
                   className={`grid transition-[grid-template-rows] duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-6 pb-5 text-sm leading-relaxed text-crema-dim">
+                    <p className="px-6 pb-5 text-sm leading-relaxed text-ink-dim">
                       {f.a}
                     </p>
                   </div>
