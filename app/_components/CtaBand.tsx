@@ -5,7 +5,7 @@ import { partnerCta } from "../_data/site";
 export default function CtaBand() {
   return (
     <section
-      className="relative bg-coffee bg-cover bg-fixed bg-center py-28 sm:py-36"
+      className="relative bg-coffee bg-cover bg-center py-28 sm:py-36"
       style={{ backgroundImage: `url(${partnerCta.bg})` }}
     >
       <div className="absolute inset-0 bg-teal-deep/85" />

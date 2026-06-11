@@ -118,7 +118,7 @@ export default function Coffee() {
                   </span>
                   <a
                     href="#quote"
-                    className="inline-flex h-10 items-center gap-1.5 rounded-lg bg-cream px-4 text-sm font-medium uppercase tracking-wide text-ink ring-1 ring-ink/15 transition-colors hover:bg-copper hover:text-cream hover:ring-copper"
+                    className="inline-flex h-10 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg bg-cream px-4 text-xs font-bold uppercase tracking-wide text-ink ring-1 ring-ink/15 transition-colors hover:bg-copper hover:text-cream hover:ring-copper"
                   >
                     <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                       <path d="M6 6h15l-1.5 9h-12zM6 6L5 3H3M9 20a1 1 0 1 0 0-.01M18 20a1 1 0 1 0 0-.01" />

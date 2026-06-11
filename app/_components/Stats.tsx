@@ -51,7 +51,7 @@ function Counter({ stat }: { stat: Stat }) {
 export default function Stats() {
   return (
     <section
-      className="relative bg-coffee bg-cover bg-fixed bg-center py-20"
+      className="relative bg-coffee bg-cover bg-center py-20"
       style={{ backgroundImage: "url(/sacks.jpg)" }}
     >
       <div className="absolute inset-0 bg-coffee/85" />

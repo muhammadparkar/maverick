@@ -7,7 +7,7 @@ export default function Spices() {
     <>
     {/* parallax heritage strip */}
     <section
-      className="relative flex min-h-[44vh] items-center justify-center bg-cover bg-fixed bg-center text-center"
+      className="relative flex min-h-[44vh] items-center justify-center bg-cover bg-center text-center"
       style={{ backgroundImage: "url(/bg-spice.jpg)" }}
     >
       <div className="absolute inset-0 bg-coffee/70" />
@@ -66,13 +66,13 @@ export default function Spices() {
                     <span className="font-semibold">Use:</span> {s.uses}
                   </p>
 
-                  <div className="mt-4 flex items-center justify-between gap-3">
-                    <span className="font-display text-lg font-bold text-copper">
+                  <div className="mt-4 flex items-center justify-between gap-2">
+                    <span className="font-display text-base font-bold leading-tight text-copper">
                       {s.price}
                     </span>
                     <a
                       href="#quote"
-                      className="inline-flex h-9 items-center rounded-lg bg-sienna px-3.5 text-xs font-medium uppercase tracking-wide text-crema transition-colors hover:bg-copper"
+                      className="inline-flex h-9 shrink-0 items-center whitespace-nowrap rounded-lg bg-copper px-3.5 text-[11px] font-bold uppercase tracking-wide text-cream transition-colors hover:bg-copper-bright"
                     >
                       Add to order
                     </a>
