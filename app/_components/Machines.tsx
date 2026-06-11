@@ -104,6 +104,23 @@ export default function Machines() {
                   </div>
                 ))}
               </dl>
+
+              <div className="relative mt-6 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-5 sm:flex-row sm:items-center">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-crema-dim">
+                    Trade price
+                  </p>
+                  <p className="font-display text-2xl font-bold text-gold">
+                    {m.price}
+                  </p>
+                </div>
+                <a
+                  href="#quote"
+                  className="inline-flex h-11 items-center justify-center rounded-lg bg-gold px-5 font-display text-sm font-bold uppercase tracking-wide text-coffee transition-colors hover:bg-copper-bright"
+                >
+                  Request a demo
+                </a>
+              </div>
               </div>
             </div>
           </Reveal>

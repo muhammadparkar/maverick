@@ -45,6 +45,18 @@ export default function Spices() {
                     <span className="font-semibold">Use:</span> {s.uses}
                   </p>
 
+                  <div className="mt-4 flex items-center justify-between gap-3">
+                    <span className="font-display text-lg font-bold text-copper">
+                      {s.price}
+                    </span>
+                    <a
+                      href="#quote"
+                      className="inline-flex h-9 items-center rounded-lg bg-sienna px-3.5 text-xs font-medium uppercase tracking-wide text-crema transition-colors hover:bg-copper"
+                    >
+                      Add to order
+                    </a>
+                  </div>
+
                   {/* hover-reveal ingredients */}
                   <div className="mt-auto pt-5">
                     <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 group-hover:grid-rows-[1fr] motion-reduce:grid-rows-[1fr]">

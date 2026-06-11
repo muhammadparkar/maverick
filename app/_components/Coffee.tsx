@@ -112,6 +112,21 @@ export default function Coffee() {
                   <span>{c.process}</span>
                   <span>{c.bag}</span>
                 </div>
+
+                <div className="mt-5 flex items-center justify-between gap-3">
+                  <span className="font-display text-xl font-bold text-gold">
+                    {c.price}
+                  </span>
+                  <a
+                    href="#quote"
+                    className="inline-flex h-10 items-center gap-1.5 rounded-lg bg-white/5 px-4 text-sm font-medium uppercase tracking-wide text-crema ring-1 ring-white/10 transition-colors hover:bg-gold hover:text-coffee hover:ring-gold"
+                  >
+                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                      <path d="M6 6h15l-1.5 9h-12zM6 6L5 3H3M9 20a1 1 0 1 0 0-.01M18 20a1 1 0 1 0 0-.01" />
+                    </svg>
+                    Add to order
+                  </a>
+                </div>
                 </div>
               </article>
             </Reveal>

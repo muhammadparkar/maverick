@@ -71,6 +71,7 @@ export type Coffee = {
   process: string;
   bag: string;
   image: string;
+  price: string;
 };
 
 export const coffees: Coffee[] = [
@@ -82,6 +83,7 @@ export const coffees: Coffee[] = [
     process: "Washed",
     bag: "1kg / 5kg / 25kg",
       image: "/bag-1.jpg",
+      price: "£26.00 / kg",
   },
   {
     name: "Maverick House Blend",
@@ -91,6 +93,7 @@ export const coffees: Coffee[] = [
     process: "Pulped natural",
     bag: "1kg / 5kg / 25kg",
       image: "/bag-2.jpg",
+      price: "£21.50 / kg",
   },
   {
     name: "Twilight Blend",
@@ -100,6 +103,7 @@ export const coffees: Coffee[] = [
     process: "Wet-hulled",
     bag: "1kg / 5kg / 25kg",
       image: "/bag-3.jpg",
+      price: "£23.00 / kg",
   },
   {
     name: "Antigua Reserve",
@@ -109,6 +113,7 @@ export const coffees: Coffee[] = [
     process: "Washed",
     bag: "1kg / 5kg",
       image: "/bag-1.jpg",
+      price: "£24.50 / kg",
   },
   {
     name: "Sidamo Heirloom",
@@ -118,6 +123,7 @@ export const coffees: Coffee[] = [
     process: "Natural",
     bag: "1kg / 5kg",
       image: "/bag-2.jpg",
+      price: "£27.00 / kg",
   },
   {
     name: "Espresso Forte",
@@ -127,6 +133,7 @@ export const coffees: Coffee[] = [
     process: "Blend",
     bag: "1kg / 5kg / 25kg",
       image: "/bag-3.jpg",
+      price: "£20.00 / kg",
   },
 ];
 
@@ -135,6 +142,7 @@ export type Machine = {
   plate: string;
   blurb: string;
   image: string;
+  price: string;
   specs: { label: string; value: string }[];
 };
 
@@ -145,6 +153,7 @@ export const machines: Machine[] = [
     blurb:
       "Three-group dual-boiler workhorse for high-volume bars. PID-stable, copper-clad, serviceable for a decade.",
     image: "/machine-1.jpg",
+    price: "from £6,400",
     specs: [
       { label: "Groups", value: "3 group" },
       { label: "Boiler", value: "Dual · 14L + 5L" },
@@ -158,6 +167,7 @@ export const machines: Machine[] = [
     blurb:
       "The two-group standard for busy cafés. Pre-infusion control, fast recovery, brushed steel and copper trim.",
     image: "/machine-2.jpg",
+    price: "from £4,200",
     specs: [
       { label: "Groups", value: "2 group" },
       { label: "Boiler", value: "11L heat-exchange" },
@@ -171,6 +181,7 @@ export const machines: Machine[] = [
     blurb:
       "On-demand flat-burr grinder. 75mm steel burrs, single-dose accuracy, near-silent motor.",
     image: "/machine-3.jpg",
+    price: "from £1,150",
     specs: [
       { label: "Burrs", value: "75mm flat steel" },
       { label: "Dosing", value: "On-demand ±0.1g" },
@@ -186,6 +197,7 @@ export type Spice = {
   uses: string;
   blend: string[];
   image: string;
+  price: string;
 };
 
 export const spices: Spice[] = [
@@ -195,6 +207,7 @@ export const spices: Spice[] = [
     uses: "Grills, salads, kebabs",
     blend: ["Sumac", "Sea salt", "Thyme", "Onion"],
     image: "/spice-1.jpg",
+    price: "£9.50 / 250g",
   },
   {
     name: "Ottoman Spice Mix",
@@ -202,6 +215,7 @@ export const spices: Spice[] = [
     uses: "Rice, stews, lamb",
     blend: ["Cumin", "Allspice", "Cinnamon", "Black pepper", "Clove"],
     image: "/spice-2.jpg",
+    price: "£8.00 / 250g",
   },
   {
     name: "Urfa Chilli Flake",
@@ -209,6 +223,7 @@ export const spices: Spice[] = [
     uses: "Finishing, marinades",
     blend: ["Urfa biber", "Sea salt", "Olive oil"],
     image: "/spice-3.jpg",
+    price: "£11.00 / 250g",
   },
   {
     name: "Baharat Seven-Spice",
@@ -216,6 +231,7 @@ export const spices: Spice[] = [
     uses: "Köfte, soups, roasts",
     blend: ["Coriander", "Cumin", "Cardamom", "Nutmeg", "Paprika"],
     image: "/spice-4.jpg",
+    price: "£8.50 / 250g",
   },
 ];
 
@@ -250,4 +266,85 @@ export const productInterests = [
   "Grinders",
   "Spice mixes",
   "Service contract",
+];
+
+// Bestseller spotlight
+export const featured = {
+  badge: "Bestseller · Wholesale",
+  name: "Maverick House Blend",
+  copy: "Our signature medium roast — milk chocolate, hazelnut and brown sugar. The everyday workhorse on over 400 café bars. Roasted to order, shipped within 48 hours.",
+  price: "£21.50 / kg",
+  unit: "Min. order 5kg · trade pricing from 25kg",
+  image: "/featured.jpg",
+  bullets: ["Roasted to order", "48-hour dispatch", "Volume pricing", "Free cupping samples"],
+};
+
+// Brand story band
+export const story = {
+  eyebrow: "Since 1998",
+  title: "From the source to your bar",
+  copy: [
+    "Maverick Trading started as a single roaster on Anatolia Wharf. Today we supply cafés, roasters and retailers across the country with three things done properly — coffee, the machines that brew it, and the spice that surrounds it.",
+    "We buy direct, roast small-batch, build our own machines and seal every spice blend at origin. One supplier, one standard, one invoice.",
+  ],
+  image: "/story.jpg",
+  stats: [
+    { value: "1998", label: "Established" },
+    { value: "22", label: "Origins" },
+    { value: "640+", label: "Trade partners" },
+  ],
+};
+
+export type Testimonial = {
+  quote: string;
+  name: string;
+  role: string;
+  avatar: string;
+};
+
+export const testimonials: Testimonial[] = [
+  {
+    quote:
+      "Switched our three sites to Maverick beans and the M-2 machines last year. Consistency is night and day, and one invoice for everything saves us hours.",
+    name: "Aylin Kaya",
+    role: "Owner · Kaya Coffee House",
+    avatar: "/avatar-2.jpg",
+  },
+  {
+    quote:
+      "The trade desk actually knows coffee. Samples arrive fast, the roast profiles are dialled, and service on the grinders has been faultless.",
+    name: "Daniel Brooks",
+    role: "Head Roaster · Brooks & Co",
+    avatar: "/avatar-1.jpg",
+  },
+  {
+    quote:
+      "Their Anatolian spice blends sell out every week on our deli counter. Authentic, fresh, and the wholesale margins work.",
+    name: "Mehmet Demir",
+    role: "Buyer · Demir Fine Foods",
+    avatar: "/avatar-3.jpg",
+  },
+];
+
+// Lifestyle gallery strip
+export const galleryImages = [
+  { src: "/g1.jpg", alt: "Café interior" },
+  { src: "/g2.jpg", alt: "Latte art" },
+  { src: "/bazaar.jpg", alt: "Spice market" },
+  { src: "/g3.jpg", alt: "Coffee bar" },
+  { src: "/g4.jpg", alt: "Fresh espresso" },
+  { src: "/g5.jpg", alt: "Spices" },
+  { src: "/g6.jpg", alt: "Coffee cup" },
+];
+
+// "Trusted by" partner names (text marquee — no fake logos)
+export const partners = [
+  "Kaya Coffee House",
+  "Brooks & Co",
+  "Demir Fine Foods",
+  "Harbour Roasters",
+  "The Daily Grind",
+  "Anatolia Deli",
+  "Meridian Cafés",
+  "Wharf & Bean",
 ];
