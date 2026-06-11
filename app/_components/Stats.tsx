@@ -50,8 +50,12 @@ function Counter({ stat }: { stat: Stat }) {
 
 export default function Stats() {
   return (
-    <section className="bg-coffee py-16">
-      <div className="mx-auto grid max-w-5xl grid-cols-2 gap-10 px-5 sm:px-8 md:grid-cols-4">
+    <section
+      className="relative bg-coffee bg-cover bg-fixed bg-center py-20"
+      style={{ backgroundImage: "url(/sacks.jpg)" }}
+    >
+      <div className="absolute inset-0 bg-coffee/85" />
+      <div className="relative mx-auto grid max-w-5xl grid-cols-2 gap-10 px-5 sm:px-8 md:grid-cols-4">
         {stats.map((s) => (
           <Counter key={s.label} stat={s} />
         ))}

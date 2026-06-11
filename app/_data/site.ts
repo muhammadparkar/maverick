@@ -348,3 +348,106 @@ export const partners = [
   "Meridian Cafés",
   "Wharf & Bean",
 ];
+
+// Origins — sourcing info with landscape imagery
+export type Origin = {
+  country: string;
+  region: string;
+  altitude: string;
+  note: string;
+  image: string;
+};
+
+export const origins: Origin[] = [
+  {
+    country: "Ethiopia",
+    region: "Yirgacheffe & Sidamo",
+    altitude: "1,800–2,200m",
+    note: "Heirloom varietals, washed and natural. Floral, tea-like, our lightest profiles.",
+    image: "/farm-1.jpg",
+  },
+  {
+    country: "Colombia",
+    region: "Huila & Nariño",
+    altitude: "1,500–1,900m",
+    note: "Caturra and Castillo from smallholder co-ops. Balanced, sweet, dependable.",
+    image: "/farm-2.jpg",
+  },
+  {
+    country: "Guatemala",
+    region: "Antigua",
+    altitude: "1,500–1,700m",
+    note: "Volcanic-soil Bourbon. Cocoa, caramel and a clean, structured finish.",
+    image: "/g3.jpg",
+  },
+  {
+    country: "Türkiye",
+    region: "Anatolia & Marmara",
+    altitude: "Spice country",
+    note: "Sumac, urfa biber and Ottoman blends — milled and sealed at source.",
+    image: "/bazaar.jpg",
+  },
+];
+
+// Services / capabilities info
+export type Service = {
+  title: string;
+  copy: string;
+  icon: "roast" | "wrench" | "label" | "truck";
+};
+
+export const services: Service[] = [
+  {
+    title: "Roast to your spec",
+    copy: "Send us your profile or build one with our roasters. Logged, repeatable, batch-traced every time.",
+    icon: "roast",
+  },
+  {
+    title: "Install & servicing",
+    copy: "We deliver, plumb and commission every machine — then keep it running with planned maintenance contracts.",
+    icon: "wrench",
+  },
+  {
+    title: "Private-label packaging",
+    copy: "Your brand on the bag. Custom labels, valve bags and retail-ready cases from 50 units.",
+    icon: "label",
+  },
+  {
+    title: "Nationwide logistics",
+    copy: "Palletised, tracked next-day delivery. Standing orders and auto-replenishment managed for you.",
+    icon: "truck",
+  },
+];
+
+export type Faq = { q: string; a: string };
+
+export const faqs: Faq[] = [
+  {
+    q: "What are your minimum order quantities?",
+    a: "Coffee starts at 5kg per blend, with trade pricing breaks at 25kg and pallet. Spice mixes from 12 units. Machines are sold individually with volume pricing for multi-site rollouts.",
+  },
+  {
+    q: "How fresh is the coffee on delivery?",
+    a: "We roast to order, not to stock. Beans are roasted within 48 hours of dispatch and stamped with roast date and batch number.",
+  },
+  {
+    q: "Do you provide samples?",
+    a: "Yes — every new trade account gets a free cupping sample pack across roast levels before committing to an order.",
+  },
+  {
+    q: "Can you service machines we didn't buy from you?",
+    a: "We service most major commercial brands. Book a one-off visit or a scheduled maintenance contract through the trade desk.",
+  },
+  {
+    q: "What are your delivery times?",
+    a: "Mainland next-working-day on stocked items and roasted coffee. Machine installs are scheduled to your opening date.",
+  },
+];
+
+// Full-width parallax CTA band
+export const partnerCta = {
+  bg: "/bg-cta.jpg",
+  eyebrow: "Become a stockist",
+  title: "One supplier for the whole bar",
+  copy: "Coffee, machines and spice — sourced, roasted and engineered under one roof. Open a trade account and get pricing, samples and a dedicated account manager.",
+};

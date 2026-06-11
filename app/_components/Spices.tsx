@@ -4,6 +4,27 @@ import { spices } from "../_data/site";
 
 export default function Spices() {
   return (
+    <>
+    {/* parallax heritage strip */}
+    <section
+      className="relative flex min-h-[44vh] items-center justify-center bg-cover bg-fixed bg-center text-center"
+      style={{ backgroundImage: "url(/bg-spice.jpg)" }}
+    >
+      <div className="absolute inset-0 bg-coffee/70" />
+      <div className="relative mx-auto max-w-3xl px-5">
+        <p className="font-display text-xs uppercase tracking-[0.3em] text-gold">
+          The Anatolian heritage
+        </p>
+        <h2 className="mt-3 font-display text-4xl font-bold uppercase tracking-wide text-silver-bright sm:text-6xl">
+          Spice with a story
+        </h2>
+        <p className="mx-auto mt-4 max-w-xl text-crema">
+          From the bazaars of Marmara to Eastern Anatolia — sun-dried, stone-milled
+          and sealed at source.
+        </p>
+      </div>
+    </section>
+
     <section id="spice" className="damask scroll-mt-24 py-20 text-sienna sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal className="max-w-2xl">
@@ -84,5 +105,6 @@ export default function Spices() {
         </div>
       </div>
     </section>
+    </>
   );
 }
